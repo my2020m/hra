@@ -14,7 +14,9 @@ def editor_js():
         'waf/rangy-core.1.3.0.js',
         'waf/rangy-selectionsaverestore.1.3.0.js',
         'waf/hallo-dompurify.js',
+        'waf/hallo-nested-list.js',
     ]
+    print(js_files)
     js_includes = format_html_join('\n', '<script src="{0}{1}"></script>',
                                    ((settings.STATIC_URL, filename) for filename in js_files)
                                    )
@@ -34,6 +36,7 @@ def editor_js():
                         KEEP_CONTENT: true
                     }};
                     registerHalloPlugin('dompurify', config);
+                    registerHalloPlugin('blockquotebuttonwithclass');
                 }})();
             </script>
         """,
