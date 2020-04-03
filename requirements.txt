@@ -1,5 +1,5 @@
 Django==1.11.29
-wagtail==1.12.6
+wagtail==1.13.4
 psycopg2==2.7.3.1
 elasticsearch==5.4.0
 django-redis==4.3.0
