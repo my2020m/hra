@@ -1,7 +1,7 @@
 from django import template
 from django.conf import settings
 
-from wagtail.wagtailcore.utils import camelcase_to_underscore
+from wagtail.core.utils import camelcase_to_underscore
 
 from hra.events.models import EventPage
 from hra.forms.models import FormPage

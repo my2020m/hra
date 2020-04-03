@@ -2,7 +2,7 @@
 # Updates beyond that will require checking for compatability
 # Also check for https://github.com/wagtail/wagtail/pull/4358 being merged
 
-from wagtail.wagtailsearch.management.commands.update_index import Command as SuperCommand
+from wagtail.search.management.commands.update_index import Command as SuperCommand
 
 
 class Command(SuperCommand):

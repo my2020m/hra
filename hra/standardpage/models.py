@@ -2,17 +2,17 @@ from django.db import models
 from django.utils.functional import cached_property
 
 from modelcluster.fields import ParentalKey
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.admin.edit_handlers import (
     FieldPanel, StreamFieldPanel,
     InlinePanel,
     MultiFieldPanel
 )
 
-from wagtail.wagtailcore.fields import StreamField, RichTextField
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailsearch import index
-from wagtail.wagtailsnippets.edit_handlers import SnippetChooserPanel
+from wagtail.core.fields import StreamField, RichTextField
+from wagtail.core.models import Page
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.search import index
+from wagtail.snippets.edit_handlers import SnippetChooserPanel
 
 from hra.utils.blocks import StoryBlock
 from hra.utils.models import ListingFields, SocialFields, RelatedPage, CallToActionSnippet

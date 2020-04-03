@@ -2,10 +2,10 @@ from django.utils.html import format_html
 from django.core import validators
 
 from wagtail.contrib.table_block.blocks import TableBlock
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailimages.blocks import ImageChooserBlock
-from wagtail.wagtailembeds.blocks import EmbedBlock
-from wagtail.wagtailsnippets.blocks import SnippetChooserBlock
+from wagtail.core import blocks
+from wagtail.images.blocks import ImageChooserBlock
+from wagtail.embeds.blocks import EmbedBlock
+from wagtail.snippets.blocks import SnippetChooserBlock
 
 from .models import CallToActionSnippet
 

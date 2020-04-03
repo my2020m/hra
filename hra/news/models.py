@@ -6,13 +6,13 @@ from django.utils.functional import cached_property
 
 from modelcluster.fields import ParentalKey
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailsnippets.edit_handlers import SnippetChooserPanel
-from wagtail.wagtailcore.fields import StreamField, RichTextField
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.core.models import Page
+from wagtail.snippets.edit_handlers import SnippetChooserPanel
+from wagtail.core.fields import StreamField, RichTextField
+from wagtail.admin.edit_handlers import (
     StreamFieldPanel, FieldPanel, InlinePanel,
     PageChooserPanel)
-from wagtail.wagtailsearch import index
+from wagtail.search import index
 
 from hra.utils.models import ListingFields, SocialFields, RelatedPage, get_adjacent_pages
 from hra.utils.blocks import StoryBlock

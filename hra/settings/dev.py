@@ -24,7 +24,7 @@ CACHES = {'default': django_cache_url.config()}
 
 WAGTAILSEARCH_BACKENDS = {
     'default': {
-        'BACKEND': 'wagtail.wagtailsearch.backends.elasticsearch5',
+        'BACKEND': 'wagtail.search.backends.elasticsearch5',
         'INDEX': 'hra',
         'HOSTS': [{
             'host': 'search',

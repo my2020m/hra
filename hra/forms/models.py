@@ -2,14 +2,14 @@ from django.db import models
 
 from modelcluster.fields import ParentalKey
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.fields import RichTextField
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.core.models import Page
+from wagtail.core.fields import RichTextField
+from wagtail.admin.edit_handlers import (
     FieldPanel, FieldRowPanel,
     MultiFieldPanel, InlinePanel
 )
-from wagtail.wagtailforms.models import AbstractFormField
-from wagtail.wagtailsearch import index
+from wagtail.contrib.forms.models import AbstractFormField
+from wagtail.search import index
 
 from wagtailcaptcha.models import WagtailCaptchaEmailForm
 

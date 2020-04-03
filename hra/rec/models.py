@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils import timezone
 from modelcluster.fields import ParentalKey
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
-from wagtail.wagtailcore.fields import RichTextField
-from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailsearch import index
-from wagtail.wagtailsnippets.edit_handlers import SnippetChooserPanel
-from wagtail.wagtailsnippets.models import register_snippet
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
+from wagtail.core.fields import RichTextField
+from wagtail.core.models import Page, Orderable
+from wagtail.search import index
+from wagtail.snippets.edit_handlers import SnippetChooserPanel
+from wagtail.snippets.models import register_snippet
 
 from hra.utils.datetime import range_month
 from hra.utils.models import SocialFields, ListingFields

@@ -1,13 +1,13 @@
 Django==1.11.29
-wagtail==1.13.4
+wagtail==2.0.2
 psycopg2==2.7.3.1
 elasticsearch==5.4.0
 django-redis==4.3.0
-Pillow==3.3.2
+Pillow==4.0.0
 django-extensions==1.7.4
 Werkzeug==0.11.11
 django-template-debug==0.3.5
-wagtail-django-recaptcha==0.1
+wagtail-django-recaptcha==1.0
 uwsgidecorators==1.1.0
 python-dateutil==2.6.0
 
