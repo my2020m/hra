@@ -6,7 +6,7 @@ from hra.api.routers import api_router
 
 
 urlpatterns = [
-    url(r'^api/v2/', include(api_router.urls)),
+    url(r'^api/v2/', api_router.urls),
 ]
 
 urlpatterns = decorate_urlpatterns(urlpatterns, never_cache)

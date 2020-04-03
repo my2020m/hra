@@ -21,7 +21,8 @@ from hra.utils.blocks import StoryBlock
 class NewsPageCategory(models.Model):
     page = ParentalKey(
         'news.NewsPage',
-        related_name='category_relationships'
+        related_name='category_relationships',
+        on_delete=models.CASCADE
     )
     category = models.ForeignKey(
         'categories.Category',
@@ -37,7 +38,8 @@ class NewsPageCategory(models.Model):
 class NewsPageRelatedPage(RelatedPage):
     source_page = ParentalKey(
         'news.NewsPage',
-        related_name='related_pages'
+        related_name='related_pages',
+        on_delete=models.CASCADE
     )
 
 
@@ -91,7 +93,7 @@ class NewsPage(Page, SocialFields, ListingFields):
 
 
 class NewsIndexFeaturedPage(RelatedPage):
-    source_page = ParentalKey('news.NewsIndex', related_name='featured_pages')
+    source_page = ParentalKey('news.NewsIndex', related_name='featured_pages', on_delete=models.CASCADE)
 
     panels = [
         PageChooserPanel('page', page_type='news.NewsPage'),

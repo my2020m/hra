@@ -36,7 +36,7 @@ class FAQ(index.Indexed, models.Model):
 
 
 class FAQPageItem(Orderable):
-    page = ParentalKey('FAQPage', related_name='faqs')
+    page = ParentalKey('FAQPage', related_name='faqs', on_delete=models.CASCADE)
     faq = models.ForeignKey(
         'FAQ',
         on_delete=models.CASCADE,

@@ -34,7 +34,7 @@ class EventType(models.Model):
 
 
 class EventPageRelatedPage(RelatedPage):
-    source_page = ParentalKey('events.EventPage', related_name='related_pages')
+    source_page = ParentalKey('events.EventPage', related_name='related_pages', on_delete=models.CASCADE)
 
 
 class EventPageEventType(models.Model):
@@ -42,7 +42,7 @@ class EventPageEventType(models.Model):
         'events.EventType',
         on_delete=models.CASCADE
     )
-    page = ParentalKey('events.EventPage', related_name='event_types')
+    page = ParentalKey('events.EventPage', related_name='event_types', on_delete=models.CASCADE)
 
     panels = [
         SnippetChooserPanel('event_type'),
@@ -143,7 +143,7 @@ class EventPage(Page, SocialFields, ListingFields):
 
 
 class EventIndexPageFeaturedPage(RelatedPage):
-    source_page = ParentalKey('events.EventIndexPage', related_name='featured_pages')
+    source_page = ParentalKey('events.EventIndexPage', related_name='featured_pages', on_delete=models.CASCADE)
 
     panels = [
         PageChooserPanel('page', page_type='events.EventPage'),

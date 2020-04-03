@@ -20,7 +20,7 @@ from hra.utils.models import (
 
 
 class FormField(AbstractFormField):
-    page = ParentalKey('FormPage', related_name='form_fields')
+    page = ParentalKey('FormPage', related_name='form_fields', on_delete=models.CASCADE)
 
 
 class FormPage(WagtailCaptchaEmailForm, SocialFields, ListingFields):

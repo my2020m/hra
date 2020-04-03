@@ -24,7 +24,8 @@ from hra.utils.models import ListingFields, SocialFields, get_adjacent_pages
 class SocialMediaProfile(models.Model):
     person_page = ParentalKey(
         'PersonPage',
-        related_name='social_media_profile'
+        related_name='social_media_profile',
+        on_delete=models.CASCADE
     )
     site_titles = (
         ('twitter', "Twitter"),
@@ -67,11 +68,13 @@ class PersonCategory(models.Model):
 class PersonPagePersonCategory(models.Model):
     page = ParentalKey(
         'PersonPage',
-        related_name='category_relationships'
+        related_name='category_relationships',
+        on_delete=models.CASCADE
     )
     category = models.ForeignKey(
         'PersonCategory',
-        related_name='+'
+        related_name='+',
+        on_delete=models.CASCADE
     )
 
     panels = [

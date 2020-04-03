@@ -21,7 +21,8 @@ from hra.utils.models import ListingFields, SocialFields, RelatedPage, CallToAct
 class StandardPagePageType(models.Model):
     page = ParentalKey(
         'standardpage.StandardPage',
-        related_name='page_type_relationships'
+        related_name='page_type_relationships',
+        on_delete=models.CASCADE
     )
     page_type = models.ForeignKey(
         'categories.PageType',
@@ -35,7 +36,7 @@ class StandardPagePageType(models.Model):
 
 
 class StandardPageRelatedPage(RelatedPage):
-    source_page = ParentalKey('standardpage.StandardPage', related_name='related_pages')
+    source_page = ParentalKey('standardpage.StandardPage', related_name='related_pages', on_delete=models.CASCADE)
 
 
 class StandardPage(Page, SocialFields, ListingFields):
@@ -73,7 +74,7 @@ class StandardPage(Page, SocialFields, ListingFields):
 
 
 class StandardIndexSectionPage(RelatedPage):
-    source_page = ParentalKey('standardpage.StandardIndex', related_name='section_pages')
+    source_page = ParentalKey('standardpage.StandardIndex', related_name='section_pages', on_delete=models.CASCADE)
 
 
 class StandardIndex(Page, SocialFields, ListingFields):
