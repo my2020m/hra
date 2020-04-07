@@ -69,7 +69,7 @@ class LinkFields(models.Model):
 
         return self.link_url
 
-    content_panels = [
+    panels = [
         MultiFieldPanel([
             PageChooserPanel('link_page'),
             FieldPanel('link_url'),
@@ -156,7 +156,7 @@ class CallToActionSnippet(LinkFields):
     panels = [
         FieldPanel('title'),
         FieldPanel('summary'),
-    ] + LinkFields.content_panels + [
+    ] + LinkFields.panels + [
         ImageChooserPanel('image'),
     ]
 
