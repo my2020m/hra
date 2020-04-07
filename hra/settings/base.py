@@ -81,7 +81,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'hra.aws.ELBHealthCheck',
     'django.middleware.security.SecurityMiddleware',
@@ -128,7 +128,7 @@ WSGI_APPLICATION = 'hra.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hra',
     }
 }

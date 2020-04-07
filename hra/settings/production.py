@@ -115,7 +115,7 @@ if 'DATABASE_URL' in os.environ:
 elif 'DATABASE_SCHEMA' in os.environ:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': env['DATABASE_SCHEMA'],
             'USER': env['DATABASE_USERNAME'],
             'PASSWORD': env['DATABASE_PASSWORD'],

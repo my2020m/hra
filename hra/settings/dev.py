@@ -33,7 +33,7 @@ WAGTAILSEARCH_BACKENDS = {
 }
 
 # For Database performance debugging...
-MIDDLEWARE_CLASSES = ['hra.rec.middleware.QueryCountDebugMiddleware', ] + MIDDLEWARE_CLASSES
+MIDDLEWARE = ['hra.rec.middleware.QueryCountDebugMiddleware', ] + MIDDLEWARE
 LOGGING['loggers']['hra.rec.middleware'] = {'level': 'DEBUG', 'handlers': ['console']}
 # LOGGING['loggers']['django.db.backends'] = {'level': 'DEBUG', 'handlers': ['console']}
 LOGGING['handlers']['console']['level'] = 'DEBUG'
