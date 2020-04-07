@@ -1,8 +1,7 @@
 from modelcluster.models import ClusterableModel
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.admin.edit_handlers import StreamFieldPanel
-from wagtail.core.blocks import (ListBlock, PageChooserBlock,
-                                        StructBlock, TextBlock)
+from wagtail.core.blocks import (ListBlock, PageChooserBlock, StructBlock, TextBlock)
 from wagtail.core.fields import StreamField
 
 from hra.esi import purge_esi

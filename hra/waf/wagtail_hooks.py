@@ -1,8 +1,3 @@
-import re
-
-from django.utils.html import format_html, format_html_join
-from django.conf import settings
-
 from wagtail.core import hooks
 
 
@@ -14,5 +9,5 @@ def register_h5_feature(features):
             features.default_features.append('h5')
         else:
             features.default_features.insert(h4_index + 1, 'h5')
-    except:
+    except ValueError:
         pass
