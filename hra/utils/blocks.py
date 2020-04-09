@@ -63,8 +63,14 @@ class LMSLoginBlock(blocks.StaticBlock):
 
 
 class CookieOptionsBlock(blocks.StructBlock):
-    measurement_desc = blocks.RichTextBlock()
-    necessary_desc = blocks.RichTextBlock()
+    measurement_desc = blocks.RichTextBlock(
+        label='Measurement cookies description',
+        help_text='Use this to describe how measurement cookies are used on the site. This section is shown only if the relevant cookies are actually in use.'
+    )
+    necessary_desc = blocks.RichTextBlock(
+        label='Necessary cookies description',
+        help_text='Use this to describe how necessary cookies are used on the site.'
+    )
 
     class Meta:
         icon = "cog"
