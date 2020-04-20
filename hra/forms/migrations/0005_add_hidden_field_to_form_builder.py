@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('forms', '0004_auto_20200403_1037'),
+        ('forms', '0004_add_multiselect_to_form_builder'),
     ]
 
     operations = [
